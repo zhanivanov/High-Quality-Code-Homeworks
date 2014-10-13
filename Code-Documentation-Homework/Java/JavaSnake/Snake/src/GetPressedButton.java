@@ -1,6 +1,10 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+/**
+ * Snake movement handling
+ * @author Zhan
+ *
+ */
 public class GetPressedButton implements KeyListener{
 	
 	public GetPressedButton(Game game){

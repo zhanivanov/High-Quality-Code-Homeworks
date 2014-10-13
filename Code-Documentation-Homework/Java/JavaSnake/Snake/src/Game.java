@@ -3,7 +3,11 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-
+/**
+ * Defines Game object
+ * @author Zhan
+ *
+ */
 @SuppressWarnings("serial")
 public class Game extends Canvas implements Runnable {
 	public static Snake mySnake;
@@ -17,7 +21,9 @@ public class Game extends Canvas implements Runnable {
 	private final Dimension GameSize = new Dimension(WIDTH, HEIGHT);
 	
 	static boolean gameRunning = false;
-	
+	/**
+	 * paints the game field
+	 */
 	public void paint(Graphics g) {
 		this.setPreferredSize(GameSize);
 		globalGraphics = g.create();
@@ -29,7 +35,9 @@ public class Game extends Canvas implements Runnable {
 			gameRunning = true;
 		}
 	}
-	
+	/**
+	 * runs the game loop
+	 */
 	public void run() {
 		while(gameRunning){
 			mySnake.tick();
@@ -46,7 +54,9 @@ public class Game extends Canvas implements Runnable {
 		mySnake = new Snake();
 		myApple = new Apple(mySnake);
 	}
-		
+	/**
+	 * draws game objects and side info
+	 */
 	public void render(Graphics g){
 		g.clearRect(0, 0, WIDTH, HEIGHT + 25);
 		

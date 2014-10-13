@@ -2,6 +2,11 @@ import java.applet.Applet;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
+/**
+ * Implements the game field and adds Game objects in it
+ * @author Zhan
+ *
+ */
 @SuppressWarnings("serial")
 public class GameApplet extends Applet {
 	private Game game;

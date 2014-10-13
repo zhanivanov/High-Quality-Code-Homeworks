@@ -1,7 +1,11 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.LinkedList;
-
+/**
+ * Defines Snake object
+ * @author Zhan
+ *
+ */
 public class Snake{
 	LinkedList<Point> snakeBody = new LinkedList<Point>();
 	private Color snakeColor;
@@ -23,13 +27,18 @@ public class Snake{
 		velocityX = 20;
 		velocityY = 0;
 	}
-	
+	/**
+	 * Draws all points from the snakeBody list
+	 * @param g
+	 */
 	public void drawSnake(Graphics g) {		
 		for (Point point : this.snakeBody) {
 			point.draw(g, snakeColor);
 		}
 	}
-	
+	/**
+	 * Implements snake move ticks
+	 */
 	public void tick() {
 		Point newSnakePointPosition = new Point((snakeBody.get(0).getX() + velocityX), (snakeBody.get(0).getY() + velocityY));
 		

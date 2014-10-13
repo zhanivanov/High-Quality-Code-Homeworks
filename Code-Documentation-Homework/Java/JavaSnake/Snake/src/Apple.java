@@ -2,7 +2,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 
-
+/**
+ * This class defines Apple object
+ * @author Zhan
+ *
+ */
 public class Apple {
 	public static Random randomNumberGenerator;
 	private Point AppleObject;
@@ -12,7 +16,11 @@ public class Apple {
 		AppleObject = createApple(s);
 		snakeColor = Color.RED;		
 	}
-	
+	/**
+	 * Add
+	 * @param s
+	 * @return
+	 */
 	private Point createApple(Snake s) {
 		randomNumberGenerator = new Random();
 		int x = randomNumberGenerator.nextInt(30) * 20; 
